@@ -8,8 +8,13 @@ data — список произвольных объектов, сравним�
 
 
 def get_min_max(data):
-    pass
-
+    if data:
+        indexed_data = list(enumerate(data))
+        min_data = min(indexed_data, key=lambda x: x[1])[0]
+        max_data = max(indexed_data, key=lambda x: x[1])[0]
+        return min_data, max_data
+    else:
+        return None
 
 # 1
 data = [2, 3, 8, 1, 7]
