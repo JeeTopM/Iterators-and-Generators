@@ -9,7 +9,17 @@ iterable — итерируемый объект, элементы которо�
 
 
 def get_min_max(iterable):
-    pass
+    iterator = iter(iterable)
+    try:
+        min_num = max_num = next(iterator)
+    except StopIteration:
+        return None
+    for num in iterator:
+        if num < min_num:
+            min_num = num
+        elif num > max_num:
+            max_num = num
+    return min_num, max_num
 
 
 # 1
