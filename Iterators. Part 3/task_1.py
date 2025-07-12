@@ -6,15 +6,11 @@
 infinite_love = iter(lambda: "i love beegeek!", None)
 
 # 1
-print(next(infinite_love))
-# i love beegeek!
-print() # просто пробел
+print(next(infinite_love))  # i love beegeek!
 # 2
 print(next(infinite_love))
 print(next(infinite_love))
 print(next(infinite_love))
-"""
-i love beegeek!
-i love beegeek!
-i love beegeek!
-"""
+# i love beegeek!
+# i love beegeek!
+# i love beegeek!

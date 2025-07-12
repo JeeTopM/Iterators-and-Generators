@@ -7,6 +7,7 @@ obj — произвольный объект
 
 
 def is_iterable(obj):
+    # return '__iter__' in dir(obj)
     try:
         iter(obj)
         return True
@@ -14,17 +15,11 @@ def is_iterable(obj):
         return False
 
 
-print(is_iterable(18731))
-"""False"""
-
-print(is_iterable("18731"))
-"""True"""
-
+# 1
+print(is_iterable(18731))  # False
+# 2
+print(is_iterable("18731"))  # True
+# 3
 objects = [(1, 13), 7.0004, [1, 2, 3]]
 for obj in objects:
-    print(is_iterable(obj))
-"""
-True
-False
-True
-"""
+    print(is_iterable(obj))  # True False True
