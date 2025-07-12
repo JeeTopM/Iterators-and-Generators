@@ -7,7 +7,11 @@ obj — произвольный объект
 
 
 def is_iterator(obj):
-    pass
+    try:
+        next(obj)
+        return True
+    except:
+        return False
 
 
 # 1
