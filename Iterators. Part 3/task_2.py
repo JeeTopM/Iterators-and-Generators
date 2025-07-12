@@ -5,7 +5,13 @@ obj — произвольный объект
 Функция должна возвращать True, если объект obj является итерируемым объектом, или False в противном случае.
 """
 
-is_iterable = ____
+
+def is_iterable(obj):
+    try:
+        iter(obj)
+        return True
+    except:
+        return False
 
 
 print(is_iterable(18731))
